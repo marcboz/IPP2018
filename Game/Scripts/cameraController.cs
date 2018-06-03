@@ -5,13 +5,13 @@ using UnityEngine;
 public class cameraController : MonoBehaviour
 {
 
-  // Use this for initialization
-  void Start()
-  {
+  string lockTag = "earth";
 
+  public void setLockTag(string tag)
+  {
+    lockTag = tag;
   }
 
-  // Update is called once per frame
   void Update()
   {
     const int orthographicSizeMin = 1;
@@ -25,5 +25,7 @@ public class cameraController : MonoBehaviour
       Camera.main.orthographicSize--;
     }
     Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize, orthographicSizeMin, orthographicSizeMax);
+
+    transform.position = new Vector3(GameObject.FindGameObjectWithTag(lockTag).transform.position.x, 4.0f, GameObject.FindGameObjectWithTag(lockTag).transform.position.z);
   }
 }
