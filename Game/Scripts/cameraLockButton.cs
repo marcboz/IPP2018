@@ -15,6 +15,6 @@ public class cameraLockButton : MonoBehaviour
 
   void changeCameraLock()
   {
-    GameObject.FindGameObjectWithTag("MainCamera").GetComponent<cameraController>().setLockTag(lockTag);
+    GameObject.FindGameObjectWithTag("MainCamera").GetComponent<cameraController>().SetLockTag(lockTag);
   }
 }

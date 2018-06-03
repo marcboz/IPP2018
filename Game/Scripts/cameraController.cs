@@ -7,15 +7,17 @@ public class cameraController : MonoBehaviour
 
   string lockTag = "earth";
 
-  public void setLockTag(string tag)
+  public void SetLockTag(string tag)
   {
     lockTag = tag;
   }
 
+  public string GetLockTag() { return lockTag; }
+
   void Update()
   {
     const int orthographicSizeMin = 1;
-    const int orthographicSizeMax = 40;
+    const int orthographicSizeMax = 70;
     if (Input.GetAxis("Mouse ScrollWheel") < 0)
     {
       Camera.main.orthographicSize++;
