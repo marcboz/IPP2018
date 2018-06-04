@@ -45,7 +45,6 @@ public class asteroidSpawner : MonoBehaviour
   {
     while (GameObject.FindGameObjectWithTag("MainCamera").GetComponent<cameraController>().GetLockTag() == "earth")
     {
-      Debug.Log("e");
       int randomIndex = Random.Range(0, 3);
       Instantiate(asteroids[Random.Range(0, 2)], spawnPointsEarth[randomIndex].position, spawnPointsEarth[randomIndex].rotation);
       yield return new WaitForSeconds(interval);
@@ -57,7 +56,6 @@ public class asteroidSpawner : MonoBehaviour
   {
     while (GameObject.FindGameObjectWithTag("MainCamera").GetComponent<cameraController>().GetLockTag() == "mars")
     {
-      Debug.Log("m");
       int randomIndex = Random.Range(0, 3);
       Instantiate(asteroids[Random.Range(0, 2)], spawnPointsMars[randomIndex].position, spawnPointsMars[randomIndex].rotation);
       yield return new WaitForSeconds(interval);
