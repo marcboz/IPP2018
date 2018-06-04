@@ -5,7 +5,7 @@ using UnityEngine;
 public class cameraController : MonoBehaviour
 {
 
-  string lockTag = "earth";
+  string lockTag = "sun";
 
   public void SetLockTag(string tag)
   {
